@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Header />
-        <Suspense>
+        <Suspense fallback={<div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-3xl">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<CreateUser />} />
